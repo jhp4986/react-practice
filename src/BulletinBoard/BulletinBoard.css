@@ -198,3 +198,9 @@
     transition: 0.3s;
     border-radius: 10px;
 }
+
+.postNo{
+    text-align:center;
+    width: 30px;
+    margin-left:-5px;
+}
