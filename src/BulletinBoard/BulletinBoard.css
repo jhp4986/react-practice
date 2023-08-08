@@ -132,3 +132,15 @@
         background-color: #cccccc;
         cursor: not-allowed;
     }
+
+    .deleteContent{
+        cursor: pointer;
+        background-color: #A593E0;
+        text-align: center;
+        color: white;
+        border-radius: 4px;
+    }
+
+    .deleteContent:hover{
+        background-color: #ced4f8;
+    }

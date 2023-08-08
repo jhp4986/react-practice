@@ -52,3 +52,6 @@
     border-color: #a593e0;
     }
 
+    textarea{
+        resize: none;
+    }
