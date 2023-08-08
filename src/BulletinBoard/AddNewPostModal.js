@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./AddNewPostModal.css"
 
     const AddNewPostModal = ({ isModalOpen, toggleModal, handleAddPostFromModal }) => {
-        
+
     const [newPostTitle, setNewPostTitle] = useState("");
     const [newPostContent, setNewPostContent] = useState("");
 

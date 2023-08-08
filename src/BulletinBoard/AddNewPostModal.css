@@ -20,6 +20,7 @@
     
     .modalContent h3 {
         margin-top: 0;
+        color: #808c9c;
     }
     .modalContent input[type="text"],
     .modalContent textarea {

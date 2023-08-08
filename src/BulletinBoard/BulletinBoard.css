@@ -1,5 +1,4 @@
     .bulletinBoardContent {
-        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -9,13 +8,13 @@
     }
     h2 { 
         font-size: 28px;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
         color: #808c9c;
         margin-right: 800px;
     }
-    .bulletinTable{
-        height: 200px;
-    }
+    
+
+
     table {
         width: 1000px;
         border-collapse: collapse;
@@ -62,9 +61,11 @@
     textarea {
         width: 100%;
         margin-bottom: 10px;
+        border: 1px solid #ced4f8;
     }
     textarea {
         height: 100px;
+        margin-bottom: -2px;
     }
     button {
         background-color: white;
@@ -76,14 +77,12 @@
         border: 1px solid lightgrey;
     }
     .addNewPostBtn{
-        position: absolute;
         background-color: #A593E0;
         color: #fff;
         border: none;
         padding: 6px 16px;
         cursor: pointer;
-        margin-top:-280px;
-        margin-left: 420px;
+        margin: 0px 0px 5px 910px;
     }
     .addNewPostBtn:hover{
         background-color: #ced4f8;
@@ -139,8 +138,63 @@
         text-align: center;
         color: white;
         border-radius: 4px;
+        font-size: 12px;
+        padding: 3px;
+        width: 20px;
     }
 
     .deleteContent:hover{
         background-color: #ced4f8;
     }
+
+    .divFlex{ display: flex;
+
+        align-items: center;
+    }
+    
+
+    .modifyContent{
+        cursor: pointer;
+        background-color: #A593E0;
+        text-align: center;
+        color: white;
+        border-radius: 4px;
+        margin-right: 10px;
+        font-size: 12px;
+        padding: 3px;
+    }
+
+    input:focus,
+    textarea:focus {
+    outline: none;
+    border-color: #A593E0;
+    }
+
+/* Add this to your BulletinBoard.css or your global CSS */
+.contentCell {
+    width: 50px;
+    max-width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 30px;
+    cursor: pointer; /* Add this to show the cursor as a pointer when hovering */
+    transition: white-space 0.3s; /* Add transition for smooth effect */
+}
+
+.wrapText {
+    white-space: normal;
+}
+
+.reSaveContent, .reSaveCancel{
+    margin-bottom:10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.reSaveCancel:hover, .reSaveContent:hover{
+    background-color: #ced4f8;
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 10px;
+}
