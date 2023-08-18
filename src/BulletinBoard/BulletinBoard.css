@@ -57,7 +57,7 @@
         font-size: 18px;
         margin-bottom: 10px;
     }
-    input[type="text"],
+    .inputTitle,
     textarea {
         width: 100%;
         margin-bottom: 10px;

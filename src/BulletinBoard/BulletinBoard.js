@@ -117,7 +117,7 @@ return (
 						{editingPost && editingPost.id === post.id ? (
 							<tr>
 								<td>
-									<input type="text" value={editingPost.title} onChange={(e) => setEditingPost({ ...editingPost, title: e.target.value, })}/>
+									<input className="inputTitle" type="text" value={editingPost.title} onChange={(e) => setEditingPost({ ...editingPost, title: e.target.value, })}/>
 								</td>
 								<td>
 									<textarea value={editingPost.content} onChange={(e) => setEditingPost({ ...editingPost, content: e.target.value, })}/>
