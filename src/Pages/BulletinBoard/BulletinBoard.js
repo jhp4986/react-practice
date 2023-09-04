@@ -3,6 +3,7 @@
 	import DeletePost from "./DeletePost";
 	import { useNavigate } from "react-router-dom";
 
+
 	const ITEMS_PER_PAGE = 3;
 
 	const BulletinBoard = () => {
@@ -19,8 +20,8 @@
 		navigate("/newpost");
 	};
 
-	const postDetailPage = () => {
-		navigate("/postdetail");
+	const postDetailPage = (postId) => {
+		navigate(`/postdetail/${postId}`);
 	};
 
 	const getCurrentPagePosts = () => {
@@ -34,9 +35,10 @@
 		<React.Fragment key={post.id}>
 			<tr>
 			<td>{post.no}</td>
-			<td onClick={postDetailPage} className="contentCell">
+			<td onClick={() => postDetailPage(post.id)} className="contentCell">
 				{post.title}
 			</td>
+
 			<td>{post.date}</td>
 			<td>
 				<div className="divFlex">
@@ -112,13 +114,27 @@
 		<div className="bulletinBoardContent">
 			<h2>Bulletin Board</h2>
 			<div className="searchiingForm">
-				<input className="searchingInput" type="text" placeholder="검색어 입력" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
-				<button className="searchingBtn" onClick={handleSearch}>검색</button>
-				{isSearching && ( // 검색 중인 경우에만 "원래대로 돌아오기" 버튼 표시
-			<button className="searchingResetBtn" onClick={handleResetSearch}>reset</button>
+			<input
+				className="searchingInput"
+				type="text"
+				placeholder="검색어 입력"
+				value={searchTerm}
+				onChange={(e) => setSearchTerm(e.target.value)}
+				onKeyDown={(e) => {
+				if (e.key === "Enter") {
+					handleSearch();
+				}
+				}}
+			/>
+			<button className="searchingBtn" onClick={handleSearch}>
+				검색
+			</button>
+			{isSearching && ( // 검색 중인 경우에만 "원래대로 돌아오기" 버튼 표시
+				<button className="searchingResetBtn" onClick={handleResetSearch}>
+				reset
+				</button>
 			)}
 			</div>
-
 
 			<div>
 			<button onClick={addNewPost} className="addNewPostBtn">
