@@ -206,3 +206,29 @@
     width: 30px;
     margin-left:-5px;
 }
+
+.searchiingForm{
+    position: relative;
+    width: 500px;
+}
+.searchingInput{
+    width: 350px;
+    height: 30px;
+    border-radius: 8px;
+    border: 2px solid #ced4f8;
+}
+
+.searchingBtn{
+    position: absolute;
+    border-radius: 8px;
+    top: 1px;
+    margin-left: 10px;
+}
+
+
+.searchingResetBtn{
+    position: absolute;
+    border: none;
+    top: 1px;
+    margin-left: 80px;
+}

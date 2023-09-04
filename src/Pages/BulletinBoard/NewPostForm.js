@@ -1,10 +1,16 @@
     // NewPostForm.js
     import React, { useState } from "react";
     import "./NewPostForm.css";
-
-    const NewPostForm = ({ onSave, onCancel }) => {
+    import { useNavigate } from "react-router-dom";
+    
+    
+    const NewPostForm = ({ onSave }) => {
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
+
+    const navigate = useNavigate();
+
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -25,11 +31,10 @@
         setContent("");
     };
 
-    const handleCancel = () => {
-        onCancel(); // Call the onCancel function passed as prop
-        setTitle("");
-        setContent("");
-    };
+    const handleCancel = () =>{
+        navigate('/bulletinboard')
+    }
+
 
     return (
         <div className="newPostForm">
